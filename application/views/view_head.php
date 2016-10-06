@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta charset="utf-8">
 	<title>LAN Trak</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>static/css/lantrak.css">
     <script src="<?php echo base_url(); ?>static/js/jquery-3.1.1.min.js"></script>
     <script src="<?php echo base_url(); ?>static/js/bootstrap.min.js"></script>
 </head>
