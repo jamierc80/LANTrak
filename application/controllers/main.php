@@ -11,7 +11,7 @@ class Main extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		//$this->load->view('welcome_message');
 	}
 	
 	public function hosts()
@@ -25,6 +25,12 @@ class Main extends CI_Controller {
 		$crud->unset_bootstrap();
 		$crud->set_relation("host_site","tbl_sites","site_description");
 		$crud->set_relation("host_type","tbl_hosttypes","ht_description");
+		$crud->display_as("host_hostname","Hostname");
+		$crud->display_as("host_ip","IP");
+		$crud->display_as("host_type","Host Type");
+		$crud->display_as("host_comments","Comments");
+		$crud->display_as("host_enabled","Enabled");
+		$crud->display_as("host_site","Site");
 		$output = $crud->render();
 		
 		$this->load->view('view_head');
@@ -44,6 +50,12 @@ class Main extends CI_Controller {
 		$crud->unset_bootstrap();
 		$crud->set_relation("host_site","tbl_sites","site_description");
 		$crud->set_relation("host_type","tbl_hosttypes","ht_description");
+		$crud->display_as("host_hostname","Hostname");
+		$crud->display_as("host_ip","IP");
+		$crud->display_as("host_type","Host Type");
+		$crud->display_as("host_comments","Comments");
+		$crud->display_as("host_enabled","Enabled");
+		$crud->display_as("host_site","Site");
 		$crud->where("host_site",$site);
 		$output = $crud->render();
 		
@@ -63,6 +75,11 @@ class Main extends CI_Controller {
 		$crud->unset_bootstrap();
 		$crud->set_relation("site_country","tbl_countries","country_description");
 		$crud->add_action('Hosts', '', 'main/hostsite','fa-search');
+		$crud->display_as("site_code","Code");
+		$crud->display_as("site_description","Description");
+		$crud->display_as("site_subnet","Subnet");
+		$crud->display_as("site_gateway","Gateway");
+		$crud->display_as("site_country","Country");
 		$output = $crud->render();
 		
 		$this->load->view('view_head');

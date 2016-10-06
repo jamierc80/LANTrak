@@ -22,6 +22,7 @@
     	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin <span class="caret"></span></a>
       		<ul class="dropdown-menu" role="menu">
                 <li><a href="<?php echo base_url(); ?>admin/users/">Users</a></li>
+                <li><a href="<?php echo base_url(); ?>admin/roles/">Roles</a></li>
                 <li><a href="<?php echo base_url(); ?>admin/countries/">Countries</a></li>
                 <li><a href="<?php echo base_url(); ?>admin/hosttypes/">Host Types</a></li>
       		</ul>
