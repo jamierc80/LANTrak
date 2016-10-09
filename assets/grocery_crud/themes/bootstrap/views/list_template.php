@@ -76,7 +76,7 @@
     var THEME_VERSION = '1.3.2';
 </script>
     <br/>
-    <div class="container gc-container">
+    <div class="container-fluid gc-container">
         <div class="success-message hidden"><?php
         if($success_message !== null){?>
            <?php echo $success_message; ?> &nbsp; &nbsp;
