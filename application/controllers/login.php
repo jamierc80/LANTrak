@@ -32,9 +32,15 @@ class Login extends CI_Controller {
 		$form = $this->input->post('forgotten');
 		if(isset($form)){
 			$email = $this->input->post('email');
-			$this->load->model('login_model');
-			$r = $this->login_model->get_password($email);
-			$d['email'] = $email;
+			if($email === "") {
+				$d['email'] = 1;
+			}else{
+				$this->load->model('login_model');
+				$r = $this->login_model->get_password($email);
+				$d['email'] = $email;
+			}
+			
+			
 		}
 		
 		
