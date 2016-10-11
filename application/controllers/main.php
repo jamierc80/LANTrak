@@ -7,6 +7,7 @@ class Main extends CI_Controller {
 	{
         parent::__construct();
 		$this->load->library('grocery_CRUD');
+		if($this->session->userdata('logged_in')!=1) { redirect('login/index','location'); };
 	}
 	
 	public function index()

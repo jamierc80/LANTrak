@@ -15,6 +15,7 @@ class Login extends CI_Controller {
 			if($r===1)
 			{
 				$this->session->set_userdata('logged_in', 1);
+				$this->session->set_userdata('user_role', 1);
 				redirect('main/sites/', 'location');
 			}
 		}
