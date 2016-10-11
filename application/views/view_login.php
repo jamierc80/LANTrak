@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <input type="password" class="form-control" name="password" placeholder="Password">
   </div>
   <input type="hidden" name="login" value="1" />
-  <button type="submit" class="btn btn-success">Submit</button>
+  <button type="submit" class="btn btn-success">Login</button>
 </form>
 <br />
 <a href="<?php echo base_url(); ?>login/forgotten/">Forgotten Password</a>
