@@ -7,7 +7,7 @@ class Admin extends CI_Controller {
 	{
         parent::__construct();
 		$this->load->library('grocery_CRUD');
-		if($this->session->userdata('user_role')!=1) { redirect('main/sites','location'); };
+		if($this->session->userdata('user_role')!="1") { redirect('main/sites','location'); };
 	}
 		
 	public function index()

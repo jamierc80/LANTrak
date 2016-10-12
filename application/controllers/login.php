@@ -15,14 +15,18 @@ class Login extends CI_Controller {
 			if($r===1)
 			{
 				$this->session->set_userdata('logged_in', 1);
-				$this->session->set_userdata('user_role', 1);
+				$result = $this->login_model->get_user($email);
+				$r = $result->first_row();
+				$this->session->set_userdata('user_role', $r->user_role);
 				redirect('main/sites/', 'location');
+			}else{
+				$login['error'] = 1;
 			}
 		}
-		
+		$login['temp'] = 0;
 		$this->load->view('view_head');
 		$this->load->view('view_navbar', $data);
-		$this->load->view('view_login');
+		$this->load->view('view_login', $login);
 	}
 	
 	public function forgotten()

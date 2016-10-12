@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container-fluid">
 <div class="alert alert-success alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Success!</strong> Your password has been sent to your email address.
+  <strong>Success:</strong> Your password has been sent to your email address.
 </div>
 </div>
 <?php } 
@@ -14,7 +14,7 @@ if($email === 1) { ?>
 <div class="container-fluid">
 <div class="alert alert-danger alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Error!</strong> Please enter your email address below.
+  <strong>Error:</strong> Please enter your email address below.
 </div>
 </div>
 <?php } ?>

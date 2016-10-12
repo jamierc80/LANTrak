@@ -17,7 +17,7 @@
                 <li><a href="<?php echo base_url(); ?>main/hosts/">Hosts</a></li>
       		</ul>
     	</li>
-		<?php if($this->session->userdata('user_role')===1) { ?>
+		<?php if($this->session->userdata('user_role')==="1") { ?>
         <li class="dropdown<?php if($this->uri->segment(1)==="admin"){ echo " active"; } ?>">
     	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin <span class="caret"></span></a>
       		<ul class="dropdown-menu" role="menu">
