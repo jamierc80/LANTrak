@@ -26,12 +26,6 @@ class login_model extends CI_Model {
 		return $result;
 	}
 	
-	function get_password($email)
-	{
-		$r = 'Password1';
-		return $r;
-	}
-	
 }
 
 ?>

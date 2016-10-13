@@ -40,10 +40,18 @@ class Login extends CI_Controller {
 				$d['email'] = 1;
 			}else{
 				$this->load->model('login_model');
-				$r = $this->login_model->get_password($email);
+				$result = $this->login_model->get_user($email);
+				$r = $result->first_row();
 				$d['email'] = $email;
+				
+				$this->load->library('email');
+				$this->email->from('noreply@lantrak.com', 'LANTrak');
+				$this->email->to($email);
+				$this->email->subject('LANTrak Password');
+				$this->email->message('Your password for LANTrak is - ' . $r->user_password);
+				
+				$this->email->send();
 			}
-			
 			
 		}
 		
