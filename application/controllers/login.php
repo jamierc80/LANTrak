@@ -58,4 +58,5 @@ class Login extends CI_Controller {
 		session_destroy();
 		redirect('login/index', 'location');	
 	}
+
 }

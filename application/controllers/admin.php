@@ -88,4 +88,5 @@ class Admin extends CI_Controller {
 		$this->load->view('view_navbar', $data);
 		$this->load->view('view_gc', $output);
 	}
+
 }
