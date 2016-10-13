@@ -12,3 +12,7 @@ It has been built using the following frameworks and libraries:
 You can check out the demo installation:
 
 http://lantrak.clarketechnologies.co.uk
+
+There is also an install guide on the project wiki
+
+https://github.com/jamierc80/LANTrak/wiki/Install-Guide
