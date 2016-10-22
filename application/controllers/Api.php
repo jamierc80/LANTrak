@@ -8,6 +8,12 @@ class Api extends CI_Controller {
         parent::__construct();
 	}
 	
+	public function api_check()
+	{
+		$data['result'] = array('a' => 1);	
+		$this->load->view('view_apiraw', $data);
+	}
+	
 	public function user_check()
 	{
 		$email = $_REQUEST['email'];
